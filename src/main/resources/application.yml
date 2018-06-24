@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url:  jdbc:postgresql://localhost/
+    username: postgres
+    password: test
+    driverClassName: org.postgresql.Driver
+
+jpa:
+  hibernate:
+    ddl-auto: update
+    show-sql: true
