@@ -24,11 +24,6 @@ class BookController @Autowired constructor(private val bookService: BookService
         return ResponseEntity.ok(bookService.findById(id))
     }
 
-    @RequestMapping("/api/books", method = arrayOf(RequestMethod.PUT))
-    fun api_update(@RequestBody book: Book): ResponseEntity<Unit>{
-        return ResponseEntity.ok(bookService.save(book))
-    }
-
     @RequestMapping("/api/books", method = arrayOf(RequestMethod.POST))
     fun api_create(@RequestBody book: Book): ResponseEntity<Unit> {
         return ResponseEntity.ok(bookService.save(Book( book.id, book.name,book.author,book.isbn)))
