@@ -1,7 +1,9 @@
 spring:
   datasource:
     url:  jdbc:postgresql://localhost/
+    # 別のユーザー名を登録した場合は↓を変える
     username: postgres
+    # 別のパスワードを登録した場合は↓を変える
     password: test
     driverClassName: org.postgresql.Driver
 

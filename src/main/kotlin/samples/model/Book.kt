@@ -10,10 +10,20 @@ import javax.persistence.*
  */
 @Entity
 @Table(name = "books")
-data class Book(@Id @SequenceGenerator(name="id_gen",sequenceName = "id_gen") @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_gen") var id: Int? = 0,
-                @Column(nullable = false) var name: String = "",
-                @Column(nullable = false) var author: String = "",
-                @Column(nullable = false) var isbn: String = "") {
-}
+data class Book(
+        @Id
+        @SequenceGenerator(name="id_gen",sequenceName = "id_gen")
+        @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_gen")
+            var id: Int? = 0,
+
+        @Column(nullable = false)
+        var name: String = "",
+
+        @Column(nullable = false)
+        var author: String = "",
+
+        @Column(nullable = false)
+        var isbn: String = ""
+) {}
 
 
